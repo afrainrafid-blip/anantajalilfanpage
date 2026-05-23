@@ -18,18 +18,38 @@ function activateSigmaMode(){
 
 }
 
+/* POPUP CLOSE */
+
 function closePopup(){
 
-  document.getElementById("popup").style.display =
-  "none";
+  const popup =
+  document.getElementById("popup");
+
+  popup.style.animation =
+  "popupDisappear 0.5s forwards";
+
+  setTimeout(() => {
+
+    popup.style.display = "none";
+
+  },500);
 
 }
 
+/* RANDOM SCREEN SHAKE */
+
 setInterval(() => {
 
+  if(
+    document.getElementById("popup").style.display
+    !== "none"
+  ){
+    return;
+  }
+
   document.body.style.transform =
-  `translate(${Math.random()*10-5}px,
-  ${Math.random()*10-5}px)`;
+  `translate(${Math.random()*6-3}px,
+  ${Math.random()*6-3}px)`;
 
   setTimeout(() => {
 
@@ -39,6 +59,8 @@ setInterval(() => {
   },100);
 
 },3000);
+
+/* RANDOM TITLE CHANGE */
 
 const titles = [
 
