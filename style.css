@@ -1,73 +1,53 @@
-/* ENTER SITE BUTTON */
+.sigma-mode{
 
-function closePopup(){
-
-  const popup =
-  document.getElementById("popup");
-
-  popup.remove();
+  animation:
+  sigmaFlash 0.2s infinite,
+  sigmaRotate 0.5s infinite;
 
 }
 
-/* SIGMA MODE */
+@keyframes sigmaFlash{
 
-function activateSigmaMode(){
+  0%{
 
-  alert("🔥 অসম্ভব বলে কিছু নাই 🔥");
+    filter:
+    hue-rotate(0deg)
+    brightness(1);
 
-  document.body.classList.add("sigma-mode");
-
-  setTimeout(() => {
-
-    document.body.classList.remove("sigma-mode");
-
-  },1500);
-
-}
-
-/* RANDOM SCREEN SHAKE */
-
-setInterval(() => {
-
-  const popup =
-  document.getElementById("popup");
-
-  if(popup){
-    return;
   }
 
-  document.body.style.transform =
-  `translate(${Math.random()*6-3}px,
-  ${Math.random()*6-3}px)`;
+  50%{
 
-  setTimeout(() => {
+    filter:
+    hue-rotate(180deg)
+    brightness(1.5);
 
-    document.body.style.transform =
-    "translate(0,0)";
+  }
 
-  },100);
+  100%{
 
-},3000);
+    filter:
+    hue-rotate(360deg)
+    brightness(1);
 
-/* RANDOM TITLE CHANGE */
+  }
+}
 
-const titles = [
+@keyframes sigmaRotate{
 
-  "🔥 SIGMA ANANTA 🔥",
-  "💀 HOLLYWOOD LEVEL 💀",
-  "🚀 IMPOSSIBLE IS NOTHING 🚀",
-  "👑 GOAT ENERGY 👑",
-  "🐐 BANGLADESH CINEMA BOSS 🐐"
+  0%{
+    transform:rotate(0deg);
+  }
 
-];
+  25%{
+    transform:rotate(1deg);
+  }
 
-setInterval(() => {
+  50%{
+    transform:rotate(-1deg);
+  }
 
-  document.title =
-  titles[
-    Math.floor(
-      Math.random()*titles.length
-    )
-  ];
-
-},1000);
+  100%{
+    transform:rotate(0deg);
+  }
+}
