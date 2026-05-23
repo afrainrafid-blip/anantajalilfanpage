@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>🔥 অনন্ত জলিল আল্ট্রা ফ্যানপেজ 🔥</title>
-
   <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700;900&family=Boogaloo&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- POPUP -->
-
+  <!-- ===== POPUP ===== -->
   <div class="popup" id="popup">
-
     <div class="popup-box">
-
-      <h1>🔥 WARNING 🔥</h1>
-
+      <h1>🔥 ⚠️ WARNING ⚠️ 🔥</h1>
       <p>
-        এই ওয়েবসাইটে প্রবেশ করলে
-        আপনার Sigma Power বেড়ে যেতে পারে 😱
+        এই ওয়েবসাইটে প্রবেশ করলে<br>
+        আপনার <strong style="color:red">Sigma Power</strong> বেড়ে যেতে পারে 😱<br><br>
+        <span style="font-size:1rem; color:#ff9900">আপনি কি সত্যিই প্রস্তুত?</span>
       </p>
-
       <button onclick="enterSite()">
-        আমি প্রস্তুত 😈
+        😈 আমি প্রস্তুত — প্রবেশ করুন 😈
       </button>
-
     </div>
-
   </div>
 
-  <!-- BACKGROUND EFFECTS -->
-
+  <!-- ===== EMOJI RAIN ===== -->
   <div class="emoji-rain">
-
     <span>🔥</span>
     <span>💀</span>
     <span>👑</span>
@@ -50,132 +34,107 @@
     <span>🐐</span>
     <span>😱</span>
     <span>💥</span>
-
+    <span>🏆</span>
+    <span>😤</span>
   </div>
 
+  <!-- ===== LASERS ===== -->
   <div class="laser laser1"></div>
   <div class="laser laser2"></div>
 
-  <!-- TOP BAR -->
-
-  <marquee scrollamount="20">
-    🔥 বাংলাদেশের ১ নাম্বার অনন্ত জলিল ফ্যানপেজ 🔥 অসম্ভব বলে কিছু নাই 🔥 HOLLYWOOD LEVEL 🔥
+  <!-- ===== MARQUEE ===== -->
+  <marquee scrollamount="18" behavior="scroll">
+    🔥 বাংলাদেশের ১ নাম্বার অনন্ত জলিল ফ্যানপেজ 🔥 অসম্ভব বলে কিছু নাই 🔥 HOLLYWOOD LEVEL 🔥 NASA ভয় পেয়েছে 🔥 SIGMA GRINDSET 🔥 আন্তর্জাতিক সুপারস্টার 🔥 GOAT OF BANGLADESH CINEMA 🔥
   </marquee>
 
+  <!-- ===== BREAKING NEWS ===== -->
   <div class="breaking-news">
-    🚨 BREAKING NEWS: NASA অনন্ত জলিলকে ভয় পেয়েছে 🚨
+    🚨 BREAKING NEWS: NASA অনন্ত জলিলকে ভয় পেয়েছে 🚨 &nbsp;&nbsp;&nbsp; 🚨 BREAKING: পৃথিবীর সবচেয়ে বড় Sigma আবিষ্কৃত হয়েছে 🚨
   </div>
 
-  <!-- HERO -->
-
+  <!-- ===== HERO ===== -->
   <header>
-
-    <h1>
-      👑 অনন্ত জলিল সুপ্রিমেসি 👑
-    </h1>
-
+    <h1>👑 অনন্ত জলিল সুপ্রিমেসি 👑</h1>
     <p>
-      বাংলাদেশের সবচেয়ে সিগমা,
-      হলিউড লেভেল,
-      আন্তর্জাতিক ফ্যানপেজে স্বাগতম।
+      বাংলাদেশের সবচেয়ে সিগমা, হলিউড লেভেল,<br>
+      আন্তর্জাতিক সুপারস্টারের অফিশিয়াল আল্ট্রা ফ্যানপেজে স্বাগতম 🔥
     </p>
-
-    <img
-      src="images/download (3).jpg"
-      class="hero-img"
-    >
-
-    <button onclick="activateSigmaMode()">
-      🔥 মোটিভেশন নিতে ক্লিক করুন 🔥
+    <img src="images/download (3).jpg" class="hero-img" alt="অনন্ত জলিল">
+    <br>
+    <button class="cta-btn" onclick="activateSigmaMode()">
+      🔥 SIGMA মোটিভেশন নিতে ক্লিক করুন 🔥
     </button>
-
+    <br>
+    <span class="scroll-hint">⬇️</span>
   </header>
 
-  <!-- GALLERY -->
-
+  <!-- ===== SIGMA COUNTER ===== -->
   <section>
+    <h2 class="section-title">😤 আপনি কতবার Sigma হলেন 😤</h2>
+    <div class="sigma-counter">
+      <div class="counter-num" id="sigma-count">0</div>
+      <p style="color:lime; font-size:1.1rem; margin-top:10px;">বার Sigma Mode সক্রিয় হয়েছে</p>
+    </div>
+  </section>
 
-    <h2 class="section-title">
-      📸 কিংবদন্তি মুহূর্তসমূহ 📸
-    </h2>
-
+  <!-- ===== GALLERY ===== -->
+  <section>
+    <h2 class="section-title">📸 কিংবদন্তি মুহূর্তসমূহ 📸</h2>
+    <p style="margin-bottom:25px; font-size:1.1rem; color:#ffff99">ছবিতে ক্লিক করলে বিস্ফোরণ হবে 💥</p>
     <div class="gallery">
-
-      <img src="images/download (3).jpg">
-      <img src="images/download (4).jpg">
-      <img src="images/download (5).jpg">
-      <img src="images/download (6).jpg">
-      <img src="images/download (7).jpg">
-      <img src="images/download (8).jpg">
-      <img src="images/download (9).jpg">
-      <img src="images/download (10).jpg">
-
+      <img src="images/download (3).jpg" alt="অনন্ত জলিল ১">
+      <img src="images/download (4).jpg" alt="অনন্ত জলিল ২">
+      <img src="images/download (5).jpg" alt="অনন্ত জলিল ৩">
+      <img src="images/download (6).jpg" alt="অনন্ত জলিল ৪">
+      <img src="images/download (7).jpg" alt="অনন্ত জলিল ৫">
+      <img src="images/download (8).jpg" alt="অনন্ত জলিল ৬">
+      <img src="images/download (9).jpg" alt="অনন্ত জলিল ৭">
+      <img src="images/download (10).jpg" alt="অনন্ত জলিল ৮">
     </div>
-
   </section>
 
-  <!-- QUOTES -->
-
+  <!-- ===== QUOTES ===== -->
   <section>
-
-    <h2 class="section-title">
-      💬 জীবন পরিবর্তনকারী উক্তি 💬
-    </h2>
-
-    <div class="quote">
-      “অসম্ভব বলে কিছু নাই”
-    </div>
-
-    <div class="quote">
-      “হলিউড লেভেলের বাংলা সিনেমা”
-    </div>
-
-    <div class="quote">
-      “দিন শেষে আমি একজন সফল ব্যবসায়ী”
-    </div>
-
-    <div class="quote">
-      “হেটাররা বলবে এটা এডিট”
-    </div>
-
+    <h2 class="section-title">💬 জীবন পরিবর্তনকারী উক্তি 💬</h2>
+    <div class="quote">"অসম্ভব বলে কিছু নাই" — অনন্ত জলিল</div>
+    <div class="quote">"হলিউড লেভেলের বাংলা সিনেমা একমাত্র আমি বানাই"</div>
+    <div class="quote">"দিন শেষে আমি একজন সফল ব্যবসায়ী এবং চলচ্চিত্রকার"</div>
+    <div class="quote">"হেটাররা বলবে এটা এডিট — কিন্তু এটা Real Life"</div>
+    <div class="quote">"আমার মতো Sigma কেউ নেই, ছিল না, থাকবে না"</div>
   </section>
 
-  <!-- POWER METER -->
-
+  <!-- ===== POWER METER ===== -->
   <section>
-
-    <h2 class="section-title">
-      🔥 অনন্ত পাওয়ার মিটার 🔥
-    </h2>
-
+    <h2 class="section-title">🔥 অনন্ত পাওয়ার মিটার 🔥</h2>
     <div class="meter">
-
       <div class="fill"></div>
-
     </div>
-
-    <p class="power-text">
-      POWER LEVEL: OVER 99999999999999
-    </p>
-
+    <p class="power-text">POWER LEVEL: OVER 99999999999999</p>
   </section>
 
-  <!-- FLOATING IMAGES -->
+  <!-- ===== VISITOR COUNTER ===== -->
+  <section>
+    <h2 class="section-title">👥 এই পেজ দেখেছেন 👥</h2>
+    <div class="visitor-box">
+      <span id="visitor-count">0</span>
+      <span style="color:white; font-size:1.5rem"> জন সিগমা মানুষ</span>
+    </div>
+  </section>
 
-  <img src="images/download (7).jpg" class="floating f1">
-  <img src="images/download (8).jpg" class="floating f2">
-  <img src="images/download (9).jpg" class="floating f3">
-  <img src="images/download (10).jpg" class="floating f4">
+  <!-- ===== FLOATING IMAGES ===== -->
+  <img src="images/download (7).jpg"  class="floating f1" alt="">
+  <img src="images/download (8).jpg"  class="floating f2" alt="">
+  <img src="images/download (9).jpg"  class="floating f3" alt="">
+  <img src="images/download (10).jpg" class="floating f4" alt="">
 
-  <!-- FOOTER -->
-
+  <!-- ===== FOOTER ===== -->
   <footer>
-
-    🔥 POWERED BY ANANTA JALIL FAN ASSOCIATION 🔥
-
+    🔥 POWERED BY ANANTA JALIL FAN ASSOCIATION INTERNATIONAL 🔥<br>
+    <span style="font-size:0.9rem; opacity:0.8; color:#ff9900">
+      © 2025 All Rights Reserved — অসম্ভব বলে কিছু নাই
+    </span>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
