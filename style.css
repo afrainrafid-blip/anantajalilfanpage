@@ -69,18 +69,50 @@ marquee{
 
 @keyframes blink{
 
-  0%{
-    opacity:1;
+  0%{opacity:1;}
+  50%{opacity:0.2;}
+  100%{opacity:1;}
+}
+
+.fire-text{
+
+  position:fixed;
+
+  bottom:10px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:red;
+
+  color:yellow;
+
+  padding:15px 40px;
+
+  font-size:30px;
+
+  border-radius:20px;
+
+  z-index:9999;
+
+  animation:fireMove 1s infinite alternate;
+}
+
+@keyframes fireMove{
+
+  from{
+    transform:
+    translateX(-50%)
+    scale(1);
   }
 
-  50%{
-    opacity:0.2;
+  to{
+    transform:
+    translateX(-50%)
+    scale(1.1)
+    rotate(2deg);
   }
-
-  100%{
-    opacity:1;
-  }
-
 }
 
 header{
@@ -101,26 +133,11 @@ header h1{
 
 @keyframes shake{
 
-  0%{
-    transform:translateX(0);
-  }
-
-  25%{
-    transform:translateX(-5px);
-  }
-
-  50%{
-    transform:translateX(5px);
-  }
-
-  75%{
-    transform:translateX(-5px);
-  }
-
-  100%{
-    transform:translateX(0);
-  }
-
+  0%{transform:translateX(0);}
+  25%{transform:translateX(-5px);}
+  50%{transform:translateX(5px);}
+  75%{transform:translateX(-5px);}
+  100%{transform:translateX(0);}
 }
 
 header p{
@@ -153,14 +170,8 @@ header p{
 
 @keyframes spin{
 
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
 }
 
 .hero h2{
@@ -204,18 +215,9 @@ button{
 
 @keyframes pulse{
 
-  0%{
-    transform:scale(1);
-  }
-
-  50%{
-    transform:scale(1.1);
-  }
-
-  100%{
-    transform:scale(1);
-  }
-
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
 }
 
 .wall{
@@ -242,6 +244,10 @@ button{
 .grid img{
 
   width:100%;
+
+  height:300px;
+
+  object-fit:cover;
 
   border:8px solid white;
 
@@ -354,12 +360,57 @@ button{
   100%{
     transform:translateX(20px);
   }
-
 }
 
 .ultimate p{
 
   font-size:35px;
+}
+
+.meme-section{
+
+  padding:60px 20px;
+}
+
+.meme-section h2{
+
+  font-size:60px;
+
+  margin-bottom:40px;
+}
+
+.meme-grid{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:20px;
+}
+
+.meme-grid img{
+
+  width:250px;
+
+  height:250px;
+
+  object-fit:cover;
+
+  border-radius:20px;
+
+  border:10px solid yellow;
+}
+
+.spin-fast{
+
+  animation:spin 2s infinite linear;
+}
+
+.shake-img{
+
+  animation:shake 0.2s infinite;
 }
 
 footer{
@@ -396,22 +447,7 @@ footer p{
   opacity:0.7;
 }
 
-.f1{
-  top:10%;
-  left:2%;
-}
-
-.f2{
-  top:60%;
-  left:85%;
-}
-
-.f3{
-  top:30%;
-  left:75%;
-}
-
-.f4{
-  top:75%;
-  left:10%;
-}
+.f1{top:10%;left:2%;}
+.f2{top:60%;left:85%;}
+.f3{top:30%;left:75%;}
+.f4{top:75%;left:10%;}
