@@ -1,0 +1,254 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+  linear-gradient(
+    45deg,
+    hotpink,
+    yellow,
+    cyan,
+    lime
+  );
+
+  background-size:400% 400%;
+
+  animation:bgMove 8s infinite alternate;
+
+  font-family:'Comic Neue', cursive;
+
+  text-align:center;
+
+  overflow-x:hidden;
+
+  color:white;
+}
+
+@keyframes bgMove{
+  0%{
+    background-position:left;
+  }
+
+  100%{
+    background-position:right;
+  }
+}
+
+marquee{
+  background:black;
+  color:yellow;
+  padding:15px;
+  font-size:25px;
+  font-weight:bold;
+}
+
+header{
+  padding:40px 20px;
+}
+
+header h1{
+  font-size:70px;
+  text-shadow:
+  5px 5px red,
+  -5px -5px blue;
+
+  animation:spin 5s infinite linear;
+}
+
+@keyframes spin{
+  0%{
+    transform:rotate(-2deg);
+  }
+
+  50%{
+    transform:rotate(2deg);
+  }
+
+  100%{
+    transform:rotate(-2deg);
+  }
+}
+
+header p{
+  margin-top:20px;
+  font-size:24px;
+}
+
+.hero{
+  padding:50px 20px;
+}
+
+.main-img{
+  width:350px;
+  border-radius:50px;
+
+  border:10px dashed yellow;
+
+  box-shadow:
+  0 0 30px red,
+  0 0 60px blue,
+  0 0 90px lime;
+
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+.hero h2{
+  margin-top:30px;
+  font-size:50px;
+}
+
+.hero p{
+  max-width:800px;
+  margin:auto;
+  margin-top:20px;
+  font-size:24px;
+}
+
+button{
+  margin-top:30px;
+
+  padding:20px 40px;
+
+  font-size:25px;
+
+  border:none;
+
+  border-radius:20px;
+
+  background:red;
+
+  color:white;
+
+  cursor:pointer;
+
+  animation:shake 0.5s infinite;
+}
+
+@keyframes shake{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  25%{
+    transform:translateX(-5px);
+  }
+
+  50%{
+    transform:translateX(5px);
+  }
+
+  75%{
+    transform:translateX(-5px);
+  }
+
+  100%{
+    transform:translateX(0);
+  }
+
+}
+
+.gallery{
+  padding:60px 20px;
+}
+
+.gallery h2{
+  font-size:50px;
+  margin-bottom:30px;
+}
+
+.images{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.images img{
+  width:250px;
+  border:8px solid white;
+  border-radius:20px;
+
+  transition:0.5s;
+}
+
+.images img:hover{
+  transform:
+  rotate(10deg)
+  scale(1.2);
+}
+
+.quotes{
+  padding:60px 20px;
+}
+
+.quote{
+  background:rgba(0,0,0,0.5);
+
+  width:80%;
+
+  margin:20px auto;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  font-size:30px;
+
+  border:5px dotted yellow;
+}
+
+.fanboy{
+  padding:60px 20px;
+}
+
+.fanboy h2{
+  font-size:50px;
+}
+
+.fanboy ul{
+  list-style:none;
+  margin-top:30px;
+}
+
+.fanboy li{
+  font-size:30px;
+  margin:15px 0;
+}
+
+footer{
+  background:black;
+
+  padding:40px 20px;
+
+  margin-top:50px;
+}
+
+footer h2{
+  font-size:40px;
+  color:yellow;
+}
+
+footer p{
+  margin-top:15px;
+  font-size:20px;
+}
