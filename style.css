@@ -1,614 +1,73 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ENTER SITE BUTTON */
+
+function closePopup(){
+
+  const popup =
+  document.getElementById("popup");
+
+  popup.remove();
+
 }
 
-body{
+/* SIGMA MODE */
 
-  font-family:'Baloo Da 2', cursive;
+function activateSigmaMode(){
 
-  background:
-  linear-gradient(
-    45deg,
-    red,
-    orange,
-    yellow,
-    lime,
-    cyan,
-    blue,
-    purple
-  );
+  alert("🔥 অসম্ভব বলে কিছু নাই 🔥");
 
-  background-size:600% 600%;
+  document.body.classList.add("sigma-mode");
 
-  animation:bg 8s infinite alternate;
+  setTimeout(() => {
 
-  text-align:center;
+    document.body.classList.remove("sigma-mode");
 
-  overflow-x:hidden;
+  },1500);
 
-  color:white;
-
-  cursor:crosshair;
 }
 
-@keyframes bg{
+/* RANDOM SCREEN SHAKE */
 
-  0%{
-    background-position:left;
+setInterval(() => {
+
+  const popup =
+  document.getElementById("popup");
+
+  if(popup){
+    return;
   }
 
-  100%{
-    background-position:right;
-  }
-}
+  document.body.style.transform =
+  `translate(${Math.random()*6-3}px,
+  ${Math.random()*6-3}px)`;
 
-.matrix-bg{
+  setTimeout(() => {
 
-  position:fixed;
+    document.body.style.transform =
+    "translate(0,0)";
 
-  inset:0;
+  },100);
 
-  background-image:
-  repeating-linear-gradient(
-    90deg,
-    rgba(0,255,0,0.05) 0px,
-    rgba(0,255,0,0.05) 2px,
-    transparent 2px,
-    transparent 40px
-  );
+},3000);
 
-  pointer-events:none;
+/* RANDOM TITLE CHANGE */
 
-  z-index:-1;
+const titles = [
 
-  animation:matrixMove 2s linear infinite;
-}
+  "🔥 SIGMA ANANTA 🔥",
+  "💀 HOLLYWOOD LEVEL 💀",
+  "🚀 IMPOSSIBLE IS NOTHING 🚀",
+  "👑 GOAT ENERGY 👑",
+  "🐐 BANGLADESH CINEMA BOSS 🐐"
 
-@keyframes matrixMove{
+];
 
-  from{
-    background-position:0 0;
-  }
+setInterval(() => {
 
-  to{
-    background-position:0 100px;
-  }
-}
+  document.title =
+  titles[
+    Math.floor(
+      Math.random()*titles.length
+    )
+  ];
 
-marquee{
-
-  background:black;
-
-  color:yellow;
-
-  padding:15px;
-
-  font-size:28px;
-
-  font-weight:bold;
-}
-
-.breaking-news{
-
-  background:red;
-
-  padding:15px;
-
-  font-size:25px;
-
-  animation:blink 0.5s infinite;
-}
-
-@keyframes blink{
-
-  0%{opacity:1;}
-  50%{opacity:0.2;}
-  100%{opacity:1;}
-}
-
-.fire-text{
-
-  position:fixed;
-
-  bottom:10px;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  background:red;
-
-  color:yellow;
-
-  padding:15px 40px;
-
-  font-size:30px;
-
-  border-radius:20px;
-
-  z-index:9999;
-
-  animation:fireMove 1s infinite alternate;
-}
-
-@keyframes fireMove{
-
-  from{
-    transform:
-    translateX(-50%)
-    scale(1);
-  }
-
-  to{
-    transform:
-    translateX(-50%)
-    scale(1.1)
-    rotate(2deg);
-  }
-}
-
-header{
-
-  padding:40px 20px;
-}
-
-header h1{
-
-  font-size:75px;
-
-  text-shadow:
-  5px 5px black,
-  -5px -5px yellow;
-
-  animation:shake 0.3s infinite;
-}
-
-@keyframes shake{
-
-  0%{transform:translateX(0);}
-  25%{transform:translateX(-5px);}
-  50%{transform:translateX(5px);}
-  75%{transform:translateX(-5px);}
-  100%{transform:translateX(0);}
-}
-
-.hero{
-
-  padding:50px 20px;
-}
-
-.hero-img{
-
-  width:350px;
-
-  border-radius:50%;
-
-  border:12px dashed yellow;
-
-  animation:spin 6s infinite linear;
-
-  box-shadow:
-  0 0 20px red,
-  0 0 40px lime,
-  0 0 60px cyan;
-}
-
-@keyframes spin{
-
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-}
-
-button{
-
-  margin-top:40px;
-
-  padding:20px 50px;
-
-  border:none;
-
-  border-radius:20px;
-
-  background:black;
-
-  color:yellow;
-
-  font-size:28px;
-
-  cursor:pointer;
-
-  animation:pulse 1s infinite;
-}
-
-@keyframes pulse{
-
-  0%{transform:scale(1);}
-  50%{transform:scale(1.1);}
-  100%{transform:scale(1);}
-}
-
-.grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-  gap:20px;
-
-  padding:40px;
-}
-
-.grid img{
-
-  width:100%;
-
-  height:300px;
-
-  object-fit:cover;
-
-  border:8px solid white;
-
-  border-radius:20px;
-
-  transition:0.5s;
-
-  animation:imageGlow 2s infinite alternate;
-}
-
-.grid img:hover{
-
-  transform:
-  rotate(10deg)
-  scale(1.2);
-}
-
-@keyframes imageGlow{
-
-  from{
-
-    filter:
-    hue-rotate(0deg)
-    drop-shadow(0 0 10px red);
-  }
-
-  to{
-
-    filter:
-    hue-rotate(360deg)
-    drop-shadow(0 0 30px yellow);
-  }
-}
-
-.quote{
-
-  background:rgba(0,0,0,0.5);
-
-  margin:20px auto;
-
-  width:80%;
-
-  padding:25px;
-
-  font-size:35px;
-
-  border-radius:20px;
-
-  border:5px dotted yellow;
-}
-
-.sigma li{
-
-  font-size:35px;
-
-  margin:20px 0;
-
-  list-style:none;
-}
-
-.meter{
-
-  width:80%;
-
-  height:60px;
-
-  background:black;
-
-  margin:30px auto;
-
-  border-radius:50px;
-
-  overflow:hidden;
-}
-
-.fill{
-
-  width:100%;
-
-  height:100%;
-
-  background:
-  linear-gradient(
-    90deg,
-    red,
-    yellow,
-    lime
-  );
-
-  animation:power 1s infinite;
-}
-
-@keyframes power{
-
-  0%{
-    transform:translateX(-20px);
-  }
-
-  100%{
-    transform:translateX(20px);
-  }
-}
-
-.meme-grid{
-
-  display:flex;
-
-  flex-wrap:wrap;
-
-  justify-content:center;
-
-  gap:20px;
-
-  padding:40px;
-}
-
-.meme-grid img{
-
-  width:250px;
-
-  height:250px;
-
-  object-fit:cover;
-
-  border-radius:20px;
-
-  border:10px solid yellow;
-}
-
-.spin-fast{
-
-  animation:spin 2s infinite linear;
-}
-
-.shake-img{
-
-  animation:shake 0.2s infinite;
-}
-
-.emoji-rain{
-
-  position:fixed;
-
-  inset:0;
-
-  pointer-events:none;
-
-  z-index:999;
-}
-
-.emoji-rain span{
-
-  position:absolute;
-
-  top:-100px;
-
-  font-size:40px;
-
-  animation:emojiFall linear infinite;
-}
-
-.emoji-rain span:nth-child(1){left:5%;animation-duration:6s;}
-.emoji-rain span:nth-child(2){left:15%;animation-duration:9s;}
-.emoji-rain span:nth-child(3){left:25%;animation-duration:7s;}
-.emoji-rain span:nth-child(4){left:35%;animation-duration:10s;}
-.emoji-rain span:nth-child(5){left:45%;animation-duration:8s;}
-.emoji-rain span:nth-child(6){left:55%;animation-duration:6s;}
-.emoji-rain span:nth-child(7){left:65%;animation-duration:12s;}
-.emoji-rain span:nth-child(8){left:75%;animation-duration:9s;}
-
-@keyframes emojiFall{
-
-  from{
-    transform:translateY(-100px) rotate(0deg);
-  }
-
-  to{
-    transform:translateY(120vh) rotate(720deg);
-  }
-}
-
-.laser{
-
-  position:fixed;
-
-  width:200%;
-
-  height:10px;
-
-  background:
-  linear-gradient(
-    90deg,
-    transparent,
-    red,
-    yellow,
-    cyan,
-    transparent
-  );
-
-  opacity:0.7;
-
-  z-index:998;
-
-  animation:laserMove 2s infinite linear;
-}
-
-.laser1{
-
-  top:20%;
-
-  transform:rotate(20deg);
-}
-
-.laser2{
-
-  top:70%;
-
-  transform:rotate(-20deg);
-
-  animation-duration:3s;
-}
-
-@keyframes laserMove{
-
-  from{
-    left:-100%;
-  }
-
-  to{
-    left:100%;
-  }
-}
-
-.dancing-text{
-
-  position:fixed;
-
-  top:50%;
-
-  left:50%;
-
-  transform:translate(-50%,-50%);
-
-  font-size:80px;
-
-  color:yellow;
-
-  opacity:0.2;
-
-  animation:dance 0.2s infinite;
-
-  z-index:997;
-
-  pointer-events:none;
-}
-
-@keyframes dance{
-
-  0%{
-    transform:
-    translate(-50%,-50%)
-    rotate(-2deg)
-    scale(1);
-  }
-
-  50%{
-    transform:
-    translate(-50%,-50%)
-    rotate(2deg)
-    scale(1.1);
-  }
-
-  100%{
-    transform:
-    translate(-50%,-50%)
-    rotate(-2deg)
-    scale(1);
-  }
-}
-
-.ultimate-popup{
-
-  position:fixed;
-
-  inset:0;
-
-  background:
-  rgba(0,0,0,0.95);
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  align-items:center;
-
-  z-index:99999;
-}
-
-.ultimate-popup h1{
-
-  font-size:100px;
-
-  color:yellow;
-
-  animation:shake 0.2s infinite;
-}
-
-.ultimate-popup p{
-
-  font-size:35px;
-
-  width:80%;
-
-  margin-top:30px;
-}
-
-footer{
-
-  background:black;
-
-  padding:50px 20px;
-
-  margin-top:50px;
-}
-
-.floating{
-
-  position:fixed;
-
-  width:120px;
-
-  opacity:0.7;
-
-  z-index:999;
-}
-@keyframes popupDisappear{
-
-  from{
-
-    opacity:1;
-
-    transform:scale(1);
-
-  }
-
-  to{
-
-    opacity:0;
-
-    transform:scale(1.5);
-
-  }
-}
-
-.f1{top:10%;left:2%;}
-.f2{top:60%;left:85%;}
-.f3{top:30%;left:75%;}
-.f4{top:75%;left:10%;}
+},1000);
