@@ -1,53 +1,34 @@
-.sigma-mode{
-
-  animation:
-  sigmaFlash 0.2s infinite,
-  sigmaRotate 0.5s infinite;
-
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-@keyframes sigmaFlash{
+body{
 
-  0%{
+  font-family:'Baloo Da 2', cursive;
 
-    filter:
-    hue-rotate(0deg)
-    brightness(1);
+  background:
+  linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    purple
+  );
 
-  }
+  background-size:600% 600%;
 
-  50%{
+  animation:bgMove 8s infinite alternate;
 
-    filter:
-    hue-rotate(180deg)
-    brightness(1.5);
+  text-align:center;
 
-  }
+  overflow-x:hidden;
 
-  100%{
-
-    filter:
-    hue-rotate(360deg)
-    brightness(1);
-
-  }
+  color:white;
 }
 
-@keyframes sigmaRotate{
-
-  0%{
-    transform:rotate(0deg);
-  }
-
-  25%{
-    transform:rotate(1deg);
-  }
-
-  50%{
-    transform:rotate(-1deg);
-  }
-
-  100%{
-    transform:rotate(0deg);
-  }
-}
+/* BACK
